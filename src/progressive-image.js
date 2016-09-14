@@ -5,6 +5,7 @@ const defaultImageStyle = { width: '100%' };
 class ProgressiveImage extends Component {
   state = {
     src: this.props.placeholder,
+    placeholder: true,
   }
 
   componentDidMount() {
@@ -14,11 +15,17 @@ class ProgressiveImage extends Component {
     img.onload = () => {
       this.setState({
         src: this.props.src,
+        placeholder: false,
       });
     };
   }
 
   render() {
+    const clazz = classNames(
+      'zvgs-image',
+      { 'zvgs-placeholder':  this.state.placeholder },
+      this.props.className
+    );
     const style = Object.assign({},
       defaultImageStyle,
       this.props.style,
@@ -26,7 +33,7 @@ class ProgressiveImage extends Component {
     return (
       <img
         role="presentation"
-        className={classNames('zvgs-image', this.props.className)}
+        className={clazz}
         style={style}
         src={this.state.src}
       />
