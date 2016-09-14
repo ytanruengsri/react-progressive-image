@@ -9,13 +9,13 @@ class ProgressiveImage extends Component {
 
   componentDidMount() {
     // preload image
-    let img = new Image();
+    const img = new Image();
     img.src = this.props.src;
     img.onload = () => {
       this.setState({
-        src: this.props.src
-      })
-    }
+        src: this.props.src,
+      });
+    };
   }
 
   render() {
@@ -25,24 +25,25 @@ class ProgressiveImage extends Component {
     );
     return (
       <img
-          className={classNames('zvgs-image', this.props.className)}
-          style={style}
-          src={this.state.src}
+        role="presentation"
+        className={classNames('zvgs-image', this.props.className)}
+        style={style}
+        src={this.state.src}
       />
     );
   }
 }
 
 ProgressiveImage.propTypes = {
-    className: PropTypes.string,
-    style: PropTypes.object,
-    placeholder: PropTypes.string.isRequired,
-    src: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  style: PropTypes.object,
+  placeholder: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
 };
 
 ProgressiveImage.defaultProps = {
-    className: '',
-    style: {},
+  className: '',
+  style: {},
 };
 
 export default ProgressiveImage;
