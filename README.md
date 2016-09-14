@@ -1,6 +1,6 @@
 # Progressive Image
 
-Simple react component to load image progressively
+Simple react component to load image progressively (Use Low Quality Image Placeholders strategy)
 
 ### Usage
 
