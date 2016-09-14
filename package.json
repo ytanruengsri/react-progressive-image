@@ -1,0 +1,51 @@
+{
+  "name": "react-progressive-image",
+  "version": "0.1.0",
+  "description": "Progressive load images",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ytanruengsri/react-progressive-image.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "boilerplate",
+    "hot",
+    "reload",
+    "hmr",
+    "live",
+    "edit",
+    "webpack"
+  ],
+  "author": "Yuthasak Tanruengsri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ytanruengsri/react-progressive-image/issues"
+  },
+  "homepage": "https://github.com/ytanruengsri/react-progressive-image",
+  "devDependencies": {
+    "babel-core": "^6.0.20",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^6.0.1",
+    "babel-preset-es2015": "^6.0.15",
+    "babel-preset-react": "^6.0.15",
+    "babel-preset-stage-0": "^6.0.15",
+    "eslint": "^3.5.0",
+    "eslint-config-airbnb": "^11.1.0",
+    "eslint-plugin-react": "^5.1.1",
+    "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-jsx-a11y": "^2.2.1",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6"
+  }
+}
